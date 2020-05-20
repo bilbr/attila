@@ -29,7 +29,11 @@
     {{#post}}
     <header class="main-header">
         <nav class="blog-title">
-            <a href="{{@site.url}}">{{@site.title}}</a>
+            {{#if @site.logo}}
+				<span class="logo">
+					<a href="{{@site.url}}" title="{{t "Home"}}"><img src="{{@site.logo}}" alt="{{t "Logo"}}" /></a>
+				</span>
+			{{/if}}
         </nav>
     </header>
 
